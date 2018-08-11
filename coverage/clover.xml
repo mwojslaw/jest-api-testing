@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1533989992100" clover="3.2.0">
-  <project timestamp="1533989992100" name="All files">
+<coverage generated="1533990502159" clover="3.2.0">
+  <project timestamp="1533990502160" name="All files">
     <metrics statements="36" coveredstatements="35" conditionals="0" coveredconditionals="0" methods="11" coveredmethods="10" elements="47" coveredelements="45" complexity="0" loc="36" ncloc="36" packages="3" files="7" classes="7">
       <package name="jest-api-testing">
         <metrics statements="10" coveredstatements="9" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="1"/>
@@ -63,9 +63,9 @@
           <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
           <line num="1" count="1" type="stmt"/>
           <line num="2" count="1" type="stmt"/>
-          <line num="11" count="1" type="stmt"/>
-          <line num="12" count="1" type="stmt"/>
-          <line num="15" count="1" type="stmt"/>
+          <line num="13" count="1" type="stmt"/>
+          <line num="14" count="1" type="stmt"/>
+          <line num="17" count="1" type="stmt"/>
         </file>
       </package>
     </metrics>

@@ -1,3 +1,3 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`/movies 1`] = `"{\\"movies\\":[{\\"_id\\":\\"5b6ed4db56471fe13b20ad72\\",\\"title\\":\\"Harry Potter and the philosopher's stone\\"},{\\"_id\\":\\"5b6ed4db56471fe13b20ad73\\",\\"title\\":\\"Harry Potter and the chamber of secrets\\"}]}"`;
+exports[`/movies 1`] = `"{\\"movies\\":[{\\"_id\\":1,\\"title\\":\\"Harry Potter and the philosopher's stone\\"},{\\"_id\\":2,\\"title\\":\\"Harry Potter and the chamber of secrets\\"}]}"`;
