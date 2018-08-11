@@ -1,0 +1,30 @@
+{
+  "name": "jest-api-testing",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "engines": {
+    "node": ">=8.0.0"
+  },
+  "jest": {
+    "globalSetup": "./setup.js",
+    "globalTeardown": "./teardown.js",
+    "testEnvironment": "./mongo-environment.js"
+  },
+  "scripts": {
+    "start": "nodemon -r dotenv/config index.js",
+    "test": "jest",
+    "test:watch": "jest --watchAll"
+  },
+  "dependencies": {
+    "dotenv": "^6.0.0",
+    "express": "^4.16.3",
+    "mongodb": "^3.1.1"
+  },
+  "devDependencies": {
+    "jest": "^23.5.0",
+    "mongodb-memory-server": "^1.9.3",
+    "nodemon": "^1.18.3",
+    "supertest": "^3.1.0"
+  }
+}
