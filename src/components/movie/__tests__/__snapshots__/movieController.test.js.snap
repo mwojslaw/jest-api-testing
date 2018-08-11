@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`/movies 1`] = `
+Object {
+  "header": Object {
+    "connection": "close",
+    "content-length": "183",
+    "content-type": "application/json; charset=utf-8",
+    "date": "Sat, 11 Aug 2018 12:13:17 GMT",
+    "etag": "W/\\"b7-3zFJdJBfJrd7SQCBT+GBPMlh8H0\\"",
+    "x-powered-by": "Express",
+  },
+  "req": Object {
+    "data": undefined,
+    "headers": Object {
+      "user-agent": "node-superagent/3.8.2",
+    },
+    "method": "GET",
+    "url": "http://127.0.0.1:53847/movies",
+  },
+  "status": 200,
+  "text": "{\\"movies\\":[{\\"_id\\":\\"5b6ed2dd0ca74ddbd3570491\\",\\"title\\":\\"Harry Potter and the philosopher's stone\\"},{\\"_id\\":\\"5b6ed2dd0ca74ddbd3570492\\",\\"title\\":\\"Harry Potter and the chamber of secrets\\"}]}",
+}
+`;
