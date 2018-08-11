@@ -13,7 +13,7 @@
   },
   "scripts": {
     "start": "nodemon -r dotenv/config index.js",
-    "test": "jest",
+    "test": "jest --coverage",
     "test:watch": "jest --watchAll"
   },
   "dependencies": {

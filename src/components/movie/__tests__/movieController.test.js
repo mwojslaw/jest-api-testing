@@ -18,5 +18,5 @@ afterAll(async () => {
 
 it("/movies", async () => {
   const response = await request(createServer(() => db)).get("/movies");
-  expect(response).toMatchSnapshot();
+  expect(response.text).toMatchSnapshot();
 });
