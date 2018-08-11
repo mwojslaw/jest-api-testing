@@ -17,6 +17,7 @@
     "test:watch": "jest --watchAll --coverage"
   },
   "dependencies": {
+    "body-parser": "^1.18.3",
     "dotenv": "^6.0.0",
     "express": "^4.16.3",
     "jwt-simple": "^0.5.1",

@@ -6,6 +6,7 @@ const passport = require("passport");
 const JwtStrategy = require("passport-jwt").Strategy;
 const ExtractJwt = require("passport-jwt").ExtractJwt;
 const { requireAuth } = require("./src/utils/authentication");
+const bodyParser = require("body-parser");
 
 const createServer = getDb => {
   const server = express();
@@ -25,10 +26,18 @@ const createServer = getDb => {
     })
   );
 
+  server.use(bodyParser.json());
+
   server.get(
     "/movies",
     requireAuth,
     asyncMiddleware(movieController.getMovies(getDb))
+  );
+
+  server.post(
+    "/movies",
+    requireAuth,
+    asyncMiddleware(movieController.addMovie(getDb))
   );
 
   server.use((error, req, res, next) => {

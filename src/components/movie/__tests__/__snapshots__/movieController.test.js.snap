@@ -1,14 +1,28 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`/movies - unauthorized 1`] = `
+exports[`GET:/movies - unauthorized 1`] = `
 Object {
   "status": 401,
 }
 `;
 
-exports[`/movies 1`] = `
+exports[`GET:/movies 1`] = `
 Object {
   "status": 200,
   "text": "{\\"movies\\":[{\\"_id\\":1,\\"title\\":\\"Harry Potter and the philosopher's stone\\"},{\\"_id\\":2,\\"title\\":\\"Harry Potter and the chamber of secrets\\"}]}",
+}
+`;
+
+exports[`POST:/movies - incorrect params 1`] = `
+Object {
+  "status": 500,
+  "text": "{\\"errorMessage\\":\\"Id and Title required\\"}",
+}
+`;
+
+exports[`POST:/movies 1`] = `
+Object {
+  "status": 200,
+  "text": "{\\"movie\\":{\\"id\\":3,\\"title\\":\\"Lord of the rings\\"}}",
 }
 `;
