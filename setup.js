@@ -9,6 +9,8 @@ const globalConfigPath = path.join(__dirname, "globalConfig.json");
 
 const mongoServer = new MongodbMemoryServer.MongoMemoryServer();
 
+require("dotenv").config();
+
 module.exports = async function() {
   const mongoConfig = {
     mongoDBName: "jest",

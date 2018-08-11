@@ -10,8 +10,18 @@ const seedMovies = db =>
     }
   ]);
 
+const seedUsers = db =>
+  db.collection("user").insertMany([
+    {
+      _id: 1,
+      email: "test@email.com",
+      password: "password"
+    }
+  ]);
+
 const seed = db => {
   seedMovies(db);
+  seedUsers(db);
 };
 
 module.exports = seed;

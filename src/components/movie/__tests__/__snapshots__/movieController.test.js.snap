@@ -1,3 +1,14 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`/movies 1`] = `"{\\"movies\\":[{\\"_id\\":1,\\"title\\":\\"Harry Potter and the philosopher's stone\\"},{\\"_id\\":2,\\"title\\":\\"Harry Potter and the chamber of secrets\\"}]}"`;
+exports[`/movies - unauthorized 1`] = `
+Object {
+  "status": 401,
+}
+`;
+
+exports[`/movies 1`] = `
+Object {
+  "status": 200,
+  "text": "{\\"movies\\":[{\\"_id\\":1,\\"title\\":\\"Harry Potter and the philosopher's stone\\"},{\\"_id\\":2,\\"title\\":\\"Harry Potter and the chamber of secrets\\"}]}",
+}
+`;
