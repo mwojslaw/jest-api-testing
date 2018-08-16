@@ -18,30 +18,30 @@ afterAll(async () => {
   await connection.close();
 });
 
-it("GET:/movies - unauthorized", async () => {
-  const response = await request(createServer(() => db)).get("/movies");
+it("GET:/movies - should return '401' status ", async () => {
+  const { status } = await request(createServer(() => db)).get("/movies");
   expect({
-    status: response.status
+    status
   }).toMatchSnapshot();
 });
 
-it("GET:/movies", async () => {
+it("GET:/movies - should return movies array and '200' status", async () => {
   const user = await getUserById(db, 1);
-  const response = await request(createServer(() => db))
+  const { body, status } = await request(createServer(() => db))
     .get("/movies")
     .set({
       authorization: getTokenForUser(user)
     });
 
   expect({
-    status: response.status,
-    text: response.text
+    status,
+    body
   }).toMatchSnapshot();
 });
 
-it("POST:/movies", async () => {
+it("POST:/movies - should return newly added movie and '200' status", async () => {
   const user = await getUserById(db, 1);
-  const response = await request(createServer(() => db))
+  const { status, body } = await request(createServer(() => db))
     .post("/movies")
     .set({
       authorization: getTokenForUser(user),
@@ -54,14 +54,14 @@ it("POST:/movies", async () => {
     });
 
   expect({
-    status: response.status,
-    text: response.text
+    status,
+    body
   }).toMatchSnapshot();
 });
 
-it("POST:/movies - incorrect params", async () => {
+it("POST:/movies - should return '500' status and proper error message", async () => {
   const user = await getUserById(db, 1);
-  const response = await request(createServer(() => db))
+  const { status, body } = await request(createServer(() => db))
     .post("/movies")
     .set({
       authorization: getTokenForUser(user),
@@ -71,7 +71,7 @@ it("POST:/movies - incorrect params", async () => {
     .send({});
 
   expect({
-    status: response.status,
-    text: response.text
+    status,
+    body
   }).toMatchSnapshot();
 });

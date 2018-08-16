@@ -1,28 +1,46 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`GET:/movies - unauthorized 1`] = `
+exports[`GET:/movies - should return '401' status  1`] = `
 Object {
   "status": 401,
 }
 `;
 
-exports[`GET:/movies 1`] = `
+exports[`GET:/movies - should return movies array and '200' status 1`] = `
 Object {
+  "body": Object {
+    "movies": Array [
+      Object {
+        "_id": 1,
+        "title": "Harry Potter and the philosopher's stone",
+      },
+      Object {
+        "_id": 2,
+        "title": "Harry Potter and the chamber of secrets",
+      },
+    ],
+  },
   "status": 200,
-  "text": "{\\"movies\\":[{\\"_id\\":1,\\"title\\":\\"Harry Potter and the philosopher's stone\\"},{\\"_id\\":2,\\"title\\":\\"Harry Potter and the chamber of secrets\\"}]}",
 }
 `;
 
-exports[`POST:/movies - incorrect params 1`] = `
+exports[`POST:/movies - should return '500' status and proper error message 1`] = `
 Object {
+  "body": Object {
+    "errorMessage": "Id and Title required",
+  },
   "status": 500,
-  "text": "{\\"errorMessage\\":\\"Id and Title required\\"}",
 }
 `;
 
-exports[`POST:/movies 1`] = `
+exports[`POST:/movies - should return newly added movie and '200' status 1`] = `
 Object {
+  "body": Object {
+    "movie": Object {
+      "id": 3,
+      "title": "Lord of the rings",
+    },
+  },
   "status": 200,
-  "text": "{\\"movie\\":{\\"id\\":3,\\"title\\":\\"Lord of the rings\\"}}",
 }
 `;
